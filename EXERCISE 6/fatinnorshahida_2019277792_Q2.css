@@ -1,0 +1,16 @@
+table,td
+		{
+			border: 1px solid;
+			border-collapse: collapse;
+			position: center;
+		}
+		tr
+		{
+			border-style: hidden;
+		}
+body
+{
+	color: black;
+	font-family: Arial;
+	font-size: 16px;
+}

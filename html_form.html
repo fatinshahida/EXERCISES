@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Form</title>
+</head>
+<body>
+	<h1 style="color: blue; text-align: center;">Student Registration Form</h1>
+	<p></p>
+<form name="stud_registration" method="post" action="action.html" target="_blank">
+	<label for="file">Profile Photo:</label>
+	<input type="file" name="file" id="file">
+	<p></p>
+	<label for="name">Name:</label> 
+	<input type="text" name="name" id="name" style="width: 70%"> 
+	<p></p>
+	<label for="dob">Date of Birth:</label> 
+	<input type="date" name="dob" id="dob">
+	<p></p>
+	<label for="pob">Place of Birth: </label> 
+	<input type="text" name="pob" id="pob" style="width: 70%">
+	<p></p>
+	Gender: 
+	<input type="radio" name="gender" id="female"  value="Female">
+	<label for="female">Female</label>
+	<input type="radio" name="gender" id="male"  value="Male">
+	<label for="male">Male</label>	
+	<p></p>
+	Describe your self: <br>
+	<textarea name="yourself" style="width: 80%; height: 200px;">
+	</textarea>	
+	<p></p>
+	<p></p>
+	<input type="submit" name="submit" value="Submit">
+	<input type="reset" name="reset" value="Reset">
+</form>
+
+
+</body>
+</html>

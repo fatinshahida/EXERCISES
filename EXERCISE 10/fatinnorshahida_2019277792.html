@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EXERCISE 10</title>
+</head>
+<body>
+
+	<h1 style="color: blue; text-align: center;">Javascripts</h1>
+
+	<p id="content">Welcome to my page</p>
+	<button type="text" onclick='document.getElementById("content").innerHTML = "I love to learn web design"'>ENTER</button>
+
+	<p id="style">Hello! Welcome to Faculty of Information Management</p>
+	<script>
+		function mystyle()
+		{
+			document.getElementById("style").style.fontSize= "25px";
+			document.getElementById("style").style.fontFamily= "Courier New";
+			document.getElementById("style").style.color= "blue";
+			document.getElementById("style").style.backgroundColor= "yellow";
+		}
+	</script>
+
+	<button type="button" onclick="mystyle()">Click Me!</button>
+
+	<p>Hello! How are you doing today?</p>
+	<script>
+		function emoji(a)
+		{
+			var gambar;
+			if (a == 1)
+			{
+				gambar = "images/smile.png"
+			}
+			else
+			{
+				gambar = "images/sad.png"
+			}
+			document.getElementById('images').src = gambar
+		}
+	</script>
+
+	<img src="images/smile.png" id="images" width="100px" height="100px">
+	<p>
+		<button type="button" onclick="emoji(1)">I'm Happy today</button>
+		<button type="button" onclick="emoji(0)">I'm Sad today</button>
+	</p>
+
+	<p>Selamat datang ke kelas IMD311</p>
+	<button onclick="enter()">Enter Now</button>
+
+	<script>
+		function enter()
+		{
+			alert("Selamat datang ke kelas IMD311")
+		}
+	</script>
+
+	<p>Confirm Box</p>
+	<button onclick="mykonfem()">OK</button>
+	<p id="demo"></p>
+	<script>
+		function mykonfem()
+		{
+			var b;
+			if (confirm("OK"))
+			{
+				b = "Thank you for your response!";
+			}
+			else
+			{
+				b = "We will be waiting for you!";
+			}
+			document.getElementById("demo").innerHTML = b;
+		}
+	</script>
+
+	<p>Please insert your birth date</p>
+	<button onclick="myprompt()">OK</button>
+	<p id="prompt1"></p>
+	<script>
+		function myprompt()
+		{
+			let text;
+			let date = prompt("Please insert yout birth date:", "birthdate");
+			if (date == null || date =="")
+			{
+				text = "We will be waiting for you!";
+			}
+			else
+			{
+				text = "Your birthday is on " +  date;
+			}
+			document.getElementById("prompt1").innerHTML = text;
+		}
+	</script>
+
+</body>
+</html>

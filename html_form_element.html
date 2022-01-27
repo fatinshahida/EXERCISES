@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Form (Input Type)</title>
+	<style>
+		h3 
+		{
+			color: blueviolet;
+		}
+	</style>
+</head>
+<body>
+
+	<!--HTML Form syntax: <form> within this containe HTML Form Elements (radio button, input text, submit button, checkbox, etc) </form>-->
+
+	<h1 align="center">HTML Form (Input type)</h1>
+
+	<h3>Input type: text (single-line input field for text input)</h3>
+	<form>
+		<label for="fname">First Name: </label><br>
+		<input type="text" name="fname" id="fname">
+		<p></p>
+		<label for="lname">Last Name: </label> <br>
+		<input type="text" name="lname" id="lname">
+	</form>
+
+	<h3>Input type: radio button (user select ONE of a limited number of choices)</h3>
+	<p>Choose your favourite color: </p>
+	<form>
+		<input type="radio" name="fav_color" id="black"  value="Black">
+		<label for="black">Black</label> <br>
+		<input type="radio" name="fav_color" id="red" value="Red">
+		<label for="red">Red</label> <br>
+		<input type="radio" name="fav_color" id="blue" value="Blue">
+		<label for="blue">Blue</label>
+	</form>
+
+	<h3>Input type: Checkboxes (user select ZERO or MORE options of a limited number of choices)</h3>
+	<p>Choose the things that you need to make a chocolate cake</p>
+	<form>
+		<input type="checkbox" name="ingredients" id="flour" value="Flour">
+		<label for="flour">Flour</label><br>
+		<input type="checkbox" name="ingredients" id="butter" value="Butter">
+		<label for="butter">Butter</label> <br>
+		<input type="checkbox" name="ingredients" id="sugar" value="Sugar">
+		<label for="sugar">Sugar</label> <br>
+		<input type="checkbox" name="ingredients" id="starch" value="Starch">
+		<label for="starch">Starch</label>
+	</form>
+
+	<h3>Input type: Password (defines a password field)</h3>
+	<form>
+		<label for="username">Username : </label> <br>
+		<input type="text" name="username" id="username"><br>
+		<label for="password">Password : </label> <br>
+		<input type="password" maxlength="12" name="password" id="password">
+	</form>
+
+	<h3>Input type: Date/ Datetime/ Month/ Week</h3>
+	<form>
+		<label for="birthday">Birthday : </label> 
+		<input type="date" name="birthday" id="birthday"><br>
+		<label for="birthdaytime">Birthday (date and time) : </label> 
+		<input type="datetime-local" maxlength="12" name="birthdaytime" id="birthdaytime"> <br>
+		<label for="bdaymonth">Birthday (month and year)</label>
+		<input type="month" name="bdaymonth" id="bdaymonth"> <br>
+		<label for="week">Select a week: </label>
+		<input type="week" name="week" id="week">
+	</form>
+
+	<h3>Input type: email</h3>
+	<form>
+		<label for="email">Please enter your email: </label><br>
+		<input type="email" name="email" id="email">
+	</form>
+
+	<h3>Input type: File</h3>
+	<form>
+		<label for="file">Select a file:</label>
+		<input type="file" name="file" id="file">
+	</form>
+
+	<h3>Input type: text area (a multi-line input field (a text area))</h3>
+	<p>Please describe yourself:</p>
+	<form>
+		<textarea name="yourself" rows="10" cols="80">
+			
+		</textarea>	
+	</form>
+
+	<p>Please describe yourself:</p>
+	<form>
+		<textarea name="yourself" style="width: 80%; height: 200px;">
+			
+		</textarea>	
+	</form>
+
+	<h3>Input type: Select element (drop-down list)</h3>
+	<form>
+		<label for="state">Select your current State:</label>
+		<select id="state" name="state">
+			<option value="johor">Johor</option>
+			<option value="kedah">Kedah</option>
+			<option value="kelantan">Kelantan</option>
+			<option value="pahang">Pahang</option>
+			<option value="terengganu">Terengganu</option>
+		</select>
+	</form>
+
+		<h3>Input type: Select element (drop-down list) - Preselected option</h3>
+	<form>
+		<label for="state">Select your current State:</label>
+		<select id="state" name="state">
+			<option value="johor">Johor</option>
+			<option value="kedah">Kedah</option>
+			<option value="kelantan" selected>Kelantan</option>
+			<option value="pahang">Pahang</option>
+			<option value="terengganu">Terengganu</option>
+		</select>
+	</form>
+
+	<h3>Input type: button</h3>
+	<form>
+		<input type="button" name="hello" onclick="alert('Hello! Welcome to my Page')" value="Click Me!">
+	</form>
+
+	<h3>Input type: Color (for input that contain a color)</h3>
+	<form>
+		<label for="fav_color">Select your favourite color: </label>
+		<input type="color" name="fav_color" id="fav_color">
+	</form>
+
+	<h3>Input type: Url</h3>
+	<form>
+		<label for="website">Please insert your personal website URL: </label>
+		<input type="url" name="website" id="website">
+	</form>
+
+	<h3>Input type: Hidden (hidden input field (not visible to a user))</h3>
+	<form>
+  		<label for="fname">First name:</label>
+  		<input type="text" id="fname" name="fname"><br><br>
+  		<label for="lname">Last name:</label>
+  		<input type="text" id="lname" name="lname"><br><br>
+  		<input type="hidden" id="user_role" name="user_role" value="student">
+	</form>
+
+</body>
+</html>

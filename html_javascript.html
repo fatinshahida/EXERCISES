@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Javascripts</title>
+</head>
+<body>
+
+	<h1 style="color: blue; text-align: center;">HTML Javascripts</h1>
+
+	<!-- tag: <script> content </script>-->
+
+	<h2>1) Change HTML Content</h2>
+
+	<p id="content">Javascript change HTML content</p>
+	<button type="button" onclick='document.getElementById("content").innerHTML = "Hello! Welcome to my page!"'>Tekan Butang Ini!</button>
+
+	<h2>2) Change style</h2>
+
+	<p id="style1">Hi! My name is Nur Ainatul Mardiah</p>
+	<script>
+		function myStyle()
+		{
+			document.getElementById("style1").style.fontSize = "25px";
+			document.getElementById("style1").style.color = "green";
+			document.getElementById("style1").style.backgroundColor = "yellow";
+			document.getElementById("style1").style.fontFamily = "Courier New";
+		}
+	</script>
+
+	<button type="button" onclick="myStyle()">Click Me!</button>
+
+	<h3>3) Change attributes</h3>
+
+	<p>Javascript changes the value of src (source ) attributes of an image</p>
+
+	<script>
+		function lampu(a)
+		{
+			var gambar;
+			if (a == 1) 
+			{
+				gambar = "images/pic_bulboff.gif"
+			}
+			else
+			{
+				gambar = "images/pic_bulbon.gif"
+			}
+			document.getElementById('image').src = gambar
+		}
+	</script>
+
+	<img src="images/pic_bulboff.gif" id="image" width="100px" height="100px">
+	<p>
+		<button type="button" onclick="lampu(0)">Light On</button>
+		<button type="button" onclick="lampu(1)">Light Off</button>
+	</p>
+
+	<h3>Popup Window</h3>
+
+	<h4>Alert Box</h4>
+	<p>This is using alert box function</p>
+	<button onclick="submit()">Submit!</button>
+
+	<script>
+		function submit()
+		{
+			alert("Maklumat anda telah berjaya disimpan!")
+		}
+
+
+	</script>
+
+	<h4>Confirm Box </h4>
+	<p>This is using confirm box</p>
+	<button onclick="mykonfem()">Hantar!</button>
+	<p id="demo"></p>
+	<script>
+		function mykonfem()
+		{
+			var b;
+			if (confirm("Klik Butang"))
+			{
+				b = "Anda klik Setuju!";
+			}
+			else
+			{
+				b = "Anda tidak Bersetuju!";
+			}
+			document.getElementById("demo").innerHTML = b;
+		}
+	</script>
+
+	<h4>Prompt Function</h4>
+	<p>This is using prompt function where user can add input</p>
+
+	<button onclick="myprompt()">Tekan Sini!</button>
+
+	<p id="prompt1"></p>
+
+	<script>
+		function myprompt()
+		{
+			let text;
+			let name = prompt("Sila masukkan nama : ", "Ainatul");
+			if (name == null || name =="")
+			{
+				text = "User click Cancel!";
+			}	
+			else
+			{
+				text = "Hello " + name + "! How are you today?"
+			}
+			document.getElementById("prompt1").innerHTML = text;
+		}
+	</script>
+
+	<h4>Line Break</h4>
+	<p>Line break in popup</p>
+
+	<button onclick="alert('Hello! \n How are you?')">Click HERE!!</button>
+
+</body>
+</html>
